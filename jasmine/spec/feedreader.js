@@ -10,10 +10,9 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-         it('has a URL defined', function () {
+         it('has a URL defined defined and it\'s not empty', function () {
            // loop through each field in object allFeeds
            for (let each of allFeeds) {
-             console.log(each.url);
              expect(each.url).toBeDefined();
              // also check if it is a string
              expect(each.url).not.toEqual(null);
@@ -25,11 +24,12 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-         // it('has a name defined', function () {
-         // });
-         // it('has not empty name', function () {
-         // });
-
+         it('has name defined and it\'s not empty')
+         for (let each of allFeeds) {
+           console.log(each.name);
+           // expect(each.name).toBeDefined();
+           // expect(each.name).not.toEqual(null);
+         }
     });
 
 
