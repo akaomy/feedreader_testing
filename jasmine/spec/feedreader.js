@@ -11,8 +11,13 @@ $(function() {
          * and that the URL is not empty.
          */
          it('has a URL defined', function () {
-           expect().
-           expect().
+           // loop through each field in object allFeeds
+           for (let each of allFeeds) {
+             console.log(each.url);
+             expect(each.url).toBeDefined();
+             // also check if it is a string
+             expect(each.url).not.toEqual(null);
+           }
          });
 
 
@@ -20,14 +25,10 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-         it('has a name defined', function () {
-           expect().
-           expect().
-         });
-         it('has not empty name', function () {
-           expect().
-           expect().
-         });
+         // it('has a name defined', function () {
+         // });
+         // it('has not empty name', function () {
+         // });
 
     });
 
@@ -38,24 +39,18 @@ $(function() {
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
-       it('has the menu elements hidden by default', function() {
-         expect().
-         expect().
-       });
+       // it('has the menu elements hidden by default', function() {
+       // });
 
        /* TODO: Write a test that ensures the menu changes
         * visibility when the menu icon is clicked. This test
         * should have two expectations: does the menu display when
         * clicked and does it hide when clicked again.
         */
-        it('displays menu', function() {
-          expect().
-          expect().
-        });
-        it('hides menu', function() {
-          expect().
-          expect().
-        });
+        // it('displays menu', function() {
+        // });
+        // it('hides menu', function() {
+        // });
     });
 
 
