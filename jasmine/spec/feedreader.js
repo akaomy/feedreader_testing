@@ -38,11 +38,14 @@ $(function() {
           expect(document.body.className).not.toContain(isHidden);
         });
 
+        // TODO: implement asynch work of these tests
+        // https://jasmine.github.io/tutorials/async
+        
         // checks if class appears once burger icon gets clicked
-        // it('is hidden when clicked second time', function() {
-        //   menuIcon.click();
-        //   expect(document.body.className).toContain(isHidden);
-        // });
+        it('is hidden when clicked second time', function() {
+          menuIcon.click();
+          expect(document.body.className).toContain(isHidden);
+        });
     });
 
 
