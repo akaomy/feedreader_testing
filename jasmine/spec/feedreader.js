@@ -24,29 +24,24 @@ $(function() {
 
 
     describe("The menu", function() {
-      /* TODO: Write a test that ensures the menu element is
-       * hidden by default. You'll have to analyze the HTML and
-       * the CSS to determine how we're performing the
-       * hiding/showing of the menu element.
-       */
+       let isHidden = document.querySelector('.menu-hidden').className;
+       let menuIcon = document.querySelector('.menu-icon-link');
+
+       // checks if menu is hidden by default
        it('is hidden by default', function() {
-         let isHidden = document.querySelector('.menu-hidden').className;
          expect(isHidden).toBe('menu-hidden');
        });
 
-       /* TODO: Write a test that ensures the menu changes
-        * visibility when the menu icon is clicked. This test
-        * should have two expectations: does the menu display when
-        * clicked and does it hide when clicked again.
-        */
-
-        // checks if class disappears when we click menuLink
+        // checks if class disappears once burger icon gets clicked
         it('is displayed when clicked', function() {
-          let hidingClass = document.querySelector('.menu-hidden').className;
-          document.querySelector('.menu-icon-link').click();
-          expect(document.body.className).not.toContain(hidingClass);
+          menuIcon.click();
+          expect(document.body.className).not.toContain(isHidden);
         });
-        // it('hides menu', function() {
+
+        // checks if class appears once burger icon gets clicked
+        // it('is hidden when clicked second time', function() {
+        //   menuIcon.click();
+        //   expect(document.body.className).toContain(isHidden);
         // });
     });
 
