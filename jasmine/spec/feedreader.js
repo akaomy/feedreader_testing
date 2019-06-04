@@ -29,16 +29,23 @@ $(function() {
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
-       // it('has the menu elements hidden by default', function() {
-       // });
+       it('is hidden by default', function() {
+         let isHidden = document.querySelector('.menu-hidden').className;
+         expect(isHidden).toBe('menu-hidden');
+       });
 
        /* TODO: Write a test that ensures the menu changes
         * visibility when the menu icon is clicked. This test
         * should have two expectations: does the menu display when
         * clicked and does it hide when clicked again.
         */
-        // it('displays menu', function() {
-        // });
+
+        // checks if class disappears when we click menuLink
+        it('is displayed when clicked', function() {
+          let hidingClass = document.querySelector('.menu-hidden').className;
+          document.querySelector('.menu-icon-link').click();
+          expect(document.body.className).not.toContain(hidingClass);
+        });
         // it('hides menu', function() {
         // });
     });
