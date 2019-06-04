@@ -5,13 +5,7 @@ $(function() {
             expect(allFeeds.length).not.toBe(0);
         });
 
-
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
          it('has a URL defined defined and it\'s not empty', function () {
-           // loop through each field in object allFeeds
            for (let each of allFeeds) {
              expect(each.url).toBeDefined();
              // also check if it is a string
@@ -19,17 +13,13 @@ $(function() {
            }
          });
 
-
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
-         it('has name defined and it\'s not empty')
-         for (let each of allFeeds) {
-           console.log(each.name);
-           // expect(each.name).toBeDefined();
-           // expect(each.name).not.toEqual(null);
-         }
+         it('has name defined and it\'s not empty', function () {
+           for (let each of allFeeds) {
+             console.log(each.name);
+             expect(each.name).toBeDefined();
+             // expect(each.name).not.toEqual(null);
+           }
+         });
     });
 
 
