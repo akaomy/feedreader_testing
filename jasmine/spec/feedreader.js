@@ -15,9 +15,9 @@ $(function() {
 
          it('has name defined and it\'s not empty', function () {
            for (let each of allFeeds) {
-             console.log(each.name);
              expect(each.name).toBeDefined();
-             // expect(each.name).not.toEqual(null);
+             // also check if it is a string
+             expect(each.name).not.toEqual(null);
            }
          });
     });
