@@ -1,5 +1,5 @@
 $(function() {
-    describe('RSS Feeds', function() {
+    xdescribe('RSS Feeds', function() {
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
@@ -22,8 +22,7 @@ $(function() {
          });
     });
 
-
-    describe("The menu", function() {
+    xdescribe("The menu", function() {
        let isHidden = document.querySelector('.menu-hidden').className;
        let menuIcon = document.querySelector('.menu-icon-link');
 
@@ -46,15 +45,18 @@ $(function() {
         });
     });
 
-
-
     describe('Initial Entries', function() {
-      /* TODO: Write a test that ensures when the loadFeed
-       * function is called and completes its work, there is at least
-       * a single .entry element within the .feed container.
-       * Remember, loadFeed() is asynchronous so this test will require
-       * the use of Jasmine's beforeEach and asynchronous done() function.
-       */
+      let feed = document.querySelector('.feed');
+      let entryLink = document.querySelector('.entry-link');
+
+      beforeEach(function (done){
+        loadFeed(2);
+        done();
+      });
+      it('will check if at least one entry exist and it\'s not empty once feed loads', function () {
+        expect(feed.firstElementChild).not.toEqual(0);
+        expect(entryLink.href).not.toEqual(0);
+      });
 
     });
 
