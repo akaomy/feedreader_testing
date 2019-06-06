@@ -47,13 +47,14 @@ $(function() {
 
     describe('Initial Entries', function() {
       let feed = document.querySelector('.feed');
-      let entryLink = document.querySelector('.entry-link');
 
       beforeEach(function (done){
         loadFeed(2);
         done();
       });
+
       it('will check if at least one entry exist and it\'s not empty once feed loads', function () {
+        let entryLink = document.querySelector('.entry-link');
         expect(feed.firstElementChild).not.toEqual(0);
         expect(entryLink.href).not.toEqual(0);
       });
@@ -65,5 +66,11 @@ $(function() {
        * by the loadFeed function that the content actually changes.
        * Remember, loadFeed() is asynchronous.
        */
+      // beforeEach(function (done){
+      //   loadFeed(2);
+      //   done();
+      // });
+
+
     });
 }());
