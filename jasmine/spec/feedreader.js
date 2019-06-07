@@ -46,18 +46,17 @@ $(function() {
     });
 
     describe('Initial Entries', function() {
-      let feed = document.querySelector('.feed');
+      beforeEach(function(done) {
+             loadFeed(2, done);
+         });
 
-      beforeEach(function (done){
-        loadFeed(2);
-        done();
-      });
-
-      it('will check if at least one entry exist and it\'s not empty once feed loads', function () {
-        let entryLink = document.querySelector('.entry-link');
-        expect(feed.firstElementChild).not.toEqual(0);
-        expect(entryLink.href).not.toEqual(0);
-      });
+         it('will check if at least one entry exist and it\'s not empty once feed loads', function() {
+             feed = document.querySelectorAll('.feed .entry');
+             expect(feed.firstElementChild).not.toEqual(null);
+             expect(feed.firstElementChild).not.toEqual(0);
+             console.log(feed.firstElementChild);
+             expect(feed.length).toBeGreaterThan(0);
+         });
 
     });
 
@@ -67,7 +66,7 @@ $(function() {
        * Remember, loadFeed() is asynchronous.
        */
       // beforeEach(function (done){
-      //   loadFeed(2);
+      //   loadFeed(2, done);
       //   done();
       // });
 
