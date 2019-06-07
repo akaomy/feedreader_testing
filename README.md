@@ -1,6 +1,7 @@
 # Project Overview
 
-Unit tests for existing web application that reads RSS feeds that are written against underlying business logic of the application with utilizing knowledge in the event handling and DOM manipulation.
+Unit tests for existing web application that reads RSS feeds.
+I wrote them against underlying business logic of the application utilizing knowledge in the event handling and DOM manipulation.
 
 
 ## Tools used
