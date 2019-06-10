@@ -40,26 +40,21 @@ $(function() {
        * Tests if the menu-hidden class is removed after clicking the menu
        * Then hides the menu again.
        */
-       // let isHidden = document.querySelector('.menu-hidden').className;
-       let isHidden = document.getElementsByClassName('menu-hidden')[0].className;
-       console.log(isHidden);
        let menuIcon = document.querySelector('.menu-icon-link');
 
-       // checks if menu is hidden by default
        it('is hidden by default', function() {
+         let isHidden = document.getElementsByClassName('menu-hidden')[0].className;
+
          expect(isHidden).toContain('menu-hidden');
-         //
        });
 
-        // checks if class disappears once burger icon gets clicked
         it('is displayed when clicked', function() {
           menuIcon.click();
-          expect(document.body.className).not.toContain(isHidden);
+          expect(document.body.className).not.toContain('menu-hidden');
         });
 
-        // checks if class appears once burger icon gets clicked
         it('is hidden when clicked second time', function() {
-          menuIcon.click();          expect(document.body.className).toContain(isHidden);
+          menuIcon.click();          expect(document.body.className).toContain('menu-hidden');
         });
     });
 
