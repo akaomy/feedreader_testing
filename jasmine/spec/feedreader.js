@@ -44,19 +44,19 @@ $(function() {
        let menuIcon = document.querySelector('.menu-icon-link');
 
        // checks if menu is hidden by default
-       xit('is hidden by default', function() {
+       it('is hidden by default', function() {
          expect(isHidden).toBe('menu-hidden');
+         //
        });
 
         // checks if class disappears once burger icon gets clicked
-        xit('is displayed when clicked', function() {
+        it('is displayed when clicked', function() {
           menuIcon.click();
           expect(document.body.className).not.toContain(isHidden);
         });
 
         // checks if class appears once burger icon gets clicked
         it('is hidden when clicked second time', function() {
-          menuIcon.click();
           menuIcon.click();
           expect(document.body.className).toContain(isHidden);
         });
