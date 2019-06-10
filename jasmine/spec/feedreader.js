@@ -21,16 +21,14 @@ $(function() {
          it('has a URL defined defined and it\'s not empty', function () {
            for (let each of allFeeds) {
              expect(each.url).toBeDefined();
-             // also check if it is a string
-             expect(each.url).not.toEqual(null);
+             expect(each.url).not.toBe(0);
            }
          });
 
          it('has name defined and it\'s not empty', function () {
            for (let each of allFeeds) {
              expect(each.name).toBeDefined();
-             // also check if it is a string
-             expect(each.name).not.toEqual(null);
+             expect(each.name).not.toBe(0);
            }
          });
     });
@@ -46,12 +44,12 @@ $(function() {
        let menuIcon = document.querySelector('.menu-icon-link');
 
        // checks if menu is hidden by default
-       it('is hidden by default', function() {
+       xit('is hidden by default', function() {
          expect(isHidden).toBe('menu-hidden');
        });
 
         // checks if class disappears once burger icon gets clicked
-        it('is displayed when clicked', function() {
+        xit('is displayed when clicked', function() {
           menuIcon.click();
           expect(document.body.className).not.toContain(isHidden);
         });
