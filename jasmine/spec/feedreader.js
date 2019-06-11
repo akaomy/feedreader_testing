@@ -28,7 +28,7 @@ $(function() {
          it('has name defined and it\'s not empty', function () {
            for (let each of allFeeds) {
              expect(each.name).toBeDefined();
-             expect(each.name).not.toBe(0);
+             expect(each.name).not.toBe("");
            }
          });
     });
@@ -72,7 +72,6 @@ $(function() {
          it('have at least one entry exist and it\'s not empty once feed loads', function() {
              feed = document.querySelectorAll('.feed .entry');
              expect(feed.firstElementChild).not.toEqual(null);
-             expect(feed.firstElementChild).not.toEqual(0);
              expect(feed.length).toBeGreaterThan(0);
          });
 
