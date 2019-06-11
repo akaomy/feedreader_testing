@@ -43,19 +43,18 @@ $(function() {
        let menuIcon = document.querySelector('.menu-icon-link');
 
        it('is hidden by default', function() {
-         let isHidden = document.getElementsByClassName('menu-hidden')[0].className;
+         expect(document.body.classList.contains('menu-hidden')).toBe(true);
 
-         expect(isHidden).toContain('menu-hidden');
        });
 
         it('is displayed when clicked', function() {
+          expect(document.body.classList.contains('menu-hidden')).toBe(true);
           menuIcon.click();
-          expect(document.body.className).not.toContain('menu-hidden');
+          expect(document.body.classList.contains('menu-hidden')).toBe(false);
+          menuIcon.click();
+          expect(document.body.classList.contains('menu-hidden')).toBe(true);
         });
 
-        it('is hidden when clicked second time', function() {
-          menuIcon.click();          expect(document.body.className).toContain('menu-hidden');
-        });
     });
 
     describe('Initial Entries', function() {
