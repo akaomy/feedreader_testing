@@ -21,7 +21,7 @@ $(function() {
          it('has a URL defined defined and it\'s not empty', function () {
            for (let each of allFeeds) {
              expect(each.url).toBeDefined();
-             expect(each.url).not.toBe(0);
+             expect(each.url).not.toBe("");
            }
          });
 
